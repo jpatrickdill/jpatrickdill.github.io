@@ -30,6 +30,8 @@ h1.name {
 	margin-top: 20px;
 }
 
+
+
 span.name {
 	opacity: 100%;
 	
@@ -43,7 +45,6 @@ h1.name span {
 	margin: 0;
 	padding: 0;
 	display: inline;
-	text-align: center;
 }
 
 h1 {
@@ -51,6 +52,29 @@ h1 {
 	font-size: 2.5em;
 	
 	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+	header {
+		position: static;
+		display: block;
+		padding: 0;
+	}
+	
+	h1.name {
+		position: static;
+		text-align: center;
+	}
+	
+	small {
+		margin: 0;
+		display: inline-block;
+		font-size: 24pt;
+	}
+	
+	span.name.scrolled {
+		opacity: 100%;
+	}
 }
 
 small {
@@ -149,6 +173,36 @@ main {
 	margin-left: 374px;
 }
 
+@media only screen and (max-width: 800px) {
+	.home .social {
+		position: static;
+		display: block;
+		margin: 15px 5px 0 5px;
+		padding: 0;
+		
+		border: 0;
+		text-align: center;
+			
+		animation: none;
+	}
+	
+	.home .social a {
+		display: inline-block;
+	}
+	
+	.home .social a span {
+		display: none;
+	}
+	
+	main {
+		position: static;
+
+		margin: 0;
+		animation: 1s ease 0s 1 appear;
+		transition: margin-left 0.3s ease;
+	}
+}
+
 .bio {
 	font-size: 1.4em;
 }
@@ -179,7 +233,7 @@ pre, code, .hljs {
 .project {
 /*	color: #ffcbf6;*/
 	
-	flex: 1 1 18%;
+	flex: 1 1 13%;
 /*	width: 300px;*/
 	max-height: 400px;
 	min-height: 400px;
@@ -194,6 +248,12 @@ pre, code, .hljs {
 	font-weight: 400;
 	
 	transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 1500px) {
+	.project {
+		flex: 1 1 18%;
+	}
 }
 
 .project>div {
@@ -223,7 +283,7 @@ pre, code, .hljs {
 	max-height: 1000px;
 /*	width: 400px;*/
 	z-index: 3;
-	flex-grow: 5;
+	flex-grow: 3;
 }
 .project:hover>div {
 	max-height: 1000px;
@@ -238,6 +298,24 @@ pre, code, .hljs {
 	font-weight: 400;
 	font-size: 1.75em;
 	max-width: 75%
+}
+
+@media only screen and (max-width: 800px) {
+	.container {
+		display: block;
+	}
+	.project {
+		flex: none;
+		display: block;
+	}
+	
+	.project h2 {
+		max-width: 100%;
+	}
+	
+	div.preprojects {
+		padding: 0 16px;
+	}
 }
 
 .project .linklist {
