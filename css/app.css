@@ -201,6 +201,10 @@ main {
 		animation: 1s ease 0s 1 appear;
 		transition: margin-left 0.3s ease;
 	}
+	
+	.home .social:hover ~ main {
+		margin-left: 150px;
+	}
 }
 
 .bio {
