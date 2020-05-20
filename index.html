@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<title>Patrick Dill</title>
+		<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script>hljs.initHighlightingOnLoad();</script>
+		<script>
+			$(function () {
+				var atrick = $(".name");
+				$(window).scroll(function() {
+					if (window.scrollY > 16) {
+						atrick.addClass("scrolled");
+					} else {
+						atrick.removeClass("scrolled");
+					}
+				});
+			});
+			
+		</script>
+		
+		<link href="css/app.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="home">
+			<header>
+				<h1 class="name">
+					<span class="p">p</span><span class="name">atrick<small> dill</small></span>
+				</h1>
+			</header>
+			<div class="social">
+				<a target="_blank" href="https://github.com/jpatrickdill">
+					<img src="images/github.png" alt="GitHub">
+					<span>jpatrickdill</span>
+				</a>
+				<a target="_blank" href="https://twitter.com/paricdil">
+					<img src="images/twitter.png" alt="Twitter">
+					<span>paricdil</span>
+				</a>
+				<a target="_blank" href="https://www.youtube.com/channel/UC0Cu6xs8y616d6cV0tyR1Hg/">
+					<img src="images/youtube.png" alt="YouTube">
+					<span>Patrick</span>
+				</a>
+				<a target="_blank" href="#">
+					<img src="images/discord.png" alt="Discord">
+					<span>paric#5665</span>
+				</a>
+				<a target="_blank" href="https://www.roblox.com/users/17047318/profile">
+					<img src="images/roblox.png" alt="Roblox">
+					<span>reshanie</span>
+				</a>
+				<a target="_blank" href="mailto:jamespatrickdill@gmail.com">
+					<img src="images/email.png" alt="Email">
+					<span>jamespatrickdill@gmail.com</span>
+				</a>
+			</div>
+			<main>
+				<div class="bio">
+					<p>Programmer from Atlanta, Georgia.</p>
+				</div>
+				<h1>projects</h1>
+				<div class="container">
+					<div class="project"><div>						
+						<h2>Beautiful Roads Plugin</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://www.youtube.com/watch?v=BnULFncl1oo">Trailer</a><a target="_blank" href="https://www.roblox.com/library/4846074825/Beautiful-Roads">Install</a><a target="_blank" href="https://discord.gg/DRAf3wy">Discord</a>
+						</div>
+						<p>The Beautiful Roads Plugin is designed to create roads for your game faster than ever before. Used by over 2,500 people.</p>
+						<p>Beautiful Roads features a versatile node-based editor, a customizable visual line editor, and fully customizable textures/materials.
+						</p>
+						
+						<div class="video">
+						<iframe src="https://www.youtube.com/embed/BnULFncl1oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+												
+				  	</div></div>
+					<div class="project"><div>	
+						<h2>Roblox Requests</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://jpatrickdill.github.io/roblox-requests">Docs</a><a target="_blank" href="https://github.com/jpatrickdill/roblox-requests">GitHub</a>
+						</div>
+						<p>
+						Roblox Requests is an HTTP library for Roblox Lua.</p>
+						<p>
+						With Requests you can send robust, human-readable HTTP requests without ever having to deal with the underlying HttpService. No more manually encoded query strings or POST data.
+						</p>
+						<p>Features:</p>
+						<ul>
+						<li>Sessions with Cookie Persistence
+						<li>Default Headers, URL prefixes
+						<li>Automatic Query Strings
+						<li>JSON Body Encoding, JSON Response Decoding
+						<li>Elegant Key/Value Cookies
+						<li>Multipart File Encoding and Upload
+						<li>Global/Per-Session Ratelimiting
+						</ul>
+						<p>See the power of Roblox Requests:</p>
+						<pre><code class="lua">local r = http.get(
+  "https://api.github.com/orgs/Roblox/repos"
+)
+
+print(r.status_code, r.message)
+-- 200 OK
+
+local repos = r:json()
+print(#repos)
+-- 30
+
+print(r.content_type)
+-- application/json
+print(r.encoding)
+-- utf-8
+print(r.headers["x-ratelimit-remaining"])
+-- 59
+						</code></pre>
+					</div></div>
+					
+					<div class="project"><div>						
+						<h2>City Explorer Demo</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://www.roblox.com/games/5003800258/City-Explorer">Play Roblox Game</a>
+						</div>
+						<p>
+						City Explorer is a Roblox game that allows you to explore any city in the world using tile map technology.
+						</p>
+						<p>All data is sourced from <a href="https://openstreetmap.org">OpenStreetMap</a>.</p>
+				  	</div></div>
+					
+					<div class="project"><div>						
+						<h2>Color Guard</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://github.com/jpatrickdill/colorguard">GitHub</a>
+						</div>
+						<p>
+						Color Guard is a Python library that allows you to easily create bit flags and use string manipulation on binary numbers.
+						</p>
+						<p>See the project's
+							<a href="https://github.com/jpatrickdill/colorguard" target="_blank">GitHub</a> for more info.</p>
+						
+				  	</div></div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
