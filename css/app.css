@@ -57,7 +57,7 @@ h1 {
 	margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px), screen and (max-height: 550px) {
 	header {
 		position: static;
 		display: block;
@@ -180,7 +180,7 @@ main {
 	margin-left: 374px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px), screen and (max-height: 550px) {
 	.home .social {
 		position: static;
 		display: block;
@@ -334,7 +334,7 @@ pre, code, .hljs {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px), screen and (max-height: 550px) {
 	.container {
 		display: block;
 	}
