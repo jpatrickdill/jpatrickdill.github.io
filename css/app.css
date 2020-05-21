@@ -4,12 +4,17 @@ html {
 
 body {
 	font-family: 'Jost', sans-serif;
-	font-weight: 200;
+	font-weight: 300;
 	
 	height: 100%;
 	background-repeat: no-repeat;
 	background: linear-gradient(#82D6FF 0%, #5894FF 100%);
     background-attachment: fixed;
+}
+
+::selection {
+	background-color: #0B62E9;
+	color: white;
 }
 
 div.home {
@@ -29,8 +34,6 @@ h1.name {
 	position: fixed;
 	margin-top: 20px;
 }
-
-
 
 span.name {
 	opacity: 100%;
@@ -81,6 +84,10 @@ small {
 	font-size: 24pt;
 }
 
+div.bio p {
+	margin: 0.7em 0;
+}
+
 @keyframes slideSize {
   0% {
     height: 0;
@@ -89,7 +96,7 @@ small {
     height: 0;
   }
   100% {
-    height: 300px;
+    height: 357px;
   }
 }
 
@@ -116,7 +123,7 @@ small {
 	
 	text-overflow: clip;
 	overflow: hidden;
-	animation: 1s ease 0s 1 slideSize;
+	animation: 1.5s ease 0s 1 slideSize;
 }
 
 .home .social a {
@@ -203,7 +210,7 @@ main {
 	}
 	
 	.home .social:hover ~ main {
-		margin-left: 150px;
+		margin-left: 0;
 	}
 }
 
@@ -256,7 +263,7 @@ pre, code, .hljs {
 
 @media only screen and (max-width: 1500px) {
 	.project {
-		flex: 1 1 18%;
+		flex: 1 1 35%;
 	}
 }
 
@@ -304,30 +311,16 @@ pre, code, .hljs {
 	max-width: 75%
 }
 
-@media only screen and (max-width: 800px) {
-	.container {
-		display: block;
-	}
-	.project {
-		flex: none;
-		display: block;
-	}
-	
-	.project h2 {
-		max-width: 100%;
-	}
-	
-	div.preprojects {
-		padding: 0 16px;
-	}
-}
-
 .project .linklist {
 	padding-top: 4px;
-	display: none;
+	font-size: 85%;
+	opacity: 1;
+	
+	transition: all 0.2s ease;
 }
 .project:hover .linklist {
-	display: block;
+	font-size: 105%;
+	opacity: 1;
 }
 
 .project .linklist a {
@@ -339,6 +332,36 @@ pre, code, .hljs {
     content: '|';
 	margin: 6px;
 }
+
+
+@media only screen and (max-width: 800px) {
+	.container {
+		display: block;
+	}
+	.project {
+		flex: none;
+		display: block;
+	}
+	
+	.project h2 {
+		max-width: 100%;
+		text-align: center;
+	}
+	
+	div.preprojects {
+		padding: 0 16px;
+	}
+	
+	.project .linklist {
+		text-align: center;
+		font-size: 100%;
+	}
+	.project:hover .linklist {
+		font-size: 115%;
+	}
+}
+
+
 
 div.video {
 	position: relative;
