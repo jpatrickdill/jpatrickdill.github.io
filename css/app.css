@@ -40,7 +40,7 @@ span.name {
 	
 	transition: all 0.2s ease;
 }
-span.name.scrolled {
+span.name.scr {
 	opacity: 0%;
 }
 
@@ -275,20 +275,6 @@ pre, code, .hljs {
     max-height:400px
 }
 
-.project::before{
-    content:'';
-    width:100%;
-    height:70%;
-    position: absolute;
-    left:0;
-    bottom:0;
-    background: linear-gradient(transparent 150px, #81b5ff);
-    transition:all .3s ease;
-    pointer-events:none;
-	border-radius: 8px;
-	z-index: 3;
-}
-
 .project:hover {
 	color: #0A3457;
 	background: rgba(255, 255, 255, .9);
@@ -299,9 +285,6 @@ pre, code, .hljs {
 }
 .project:hover>div {
 	max-height: 1000px;
-}
-.project:hover::before {
-	background: none;
 }
 
 .project h2 {
