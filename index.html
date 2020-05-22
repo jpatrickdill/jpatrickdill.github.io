@@ -21,10 +21,10 @@
 			$(function () {
 				var atrick = $(".name");
 				$(window).scroll(function() {
-					if (window.scrollY > 16) {
-						atrick.addClass("scrolled");
+					if (window.scrollY >= 16) {
+						atrick.addClass("scr");
 					} else {
-						atrick.removeClass("scrolled");
+						atrick.removeClass("scr");
 					}
 				});
 			});
@@ -49,7 +49,7 @@
 		<div class="home">
 			<header>
 				<h1 class="name">
-					<span class="p">p</span><span class="name">atrick<small> dill</small></span>
+					<span class="p">p</span><span class="name">atrick dill</span>
 				</h1>
 			</header>
 			<div class="social">
