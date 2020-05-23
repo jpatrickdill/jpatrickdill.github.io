@@ -20,11 +20,14 @@
 		<script>
 			$(function () {
 				var atrick = $(".name");
+				var social = $(".social");
 				$(window).scroll(function() {
 					if (window.scrollY >= 16) {
 						atrick.addClass("scr");
+						social.addClass("scr");
 					} else {
 						atrick.removeClass("scr");
+						social.removeClass("scr");
 					}
 				});
 			});
@@ -49,7 +52,7 @@
 		<div class="home">
 			<header>
 				<h1 class="name">
-					<span class="p">p</span><span class="name">atrick dill</span>
+					<span class="name">patrick<span class="ln"> dill</span></span>
 				</h1>
 			</header>
 			<div class="social">
@@ -73,6 +76,10 @@
 					<img src="images/roblox.png" alt="Roblox">
 					<span>reshanie</span>
 				</a>
+				<a target="_blank" href="mailto:jamespatrickdill@gmail.com">
+					<img src="images/email.png" alt="Email">
+					<span>jamespatrickdill@gmail.com</span>
+				</a>
 				<a target="_blank" href="https://ko-fi.com/paric">
 					<img src="images/ko-fi.png" alt="Ko-Fi">
 					<span>Donate</span>
@@ -81,24 +88,12 @@
 			<main>
 				<div class="preprojects">
 					<div class="bio">
-						<p>Programmer from Atlanta, Georgia. I enjoy making tools and frameworks for others to use.</p>
+						<p>Programmer from Atlanta, Georgia. I enjoy making tools and libraries for others to use.</p>
 					</div>
-					<h1>projects</h1>
+					<h1>libraries</h1>
 				</div>
 				
 				<div class="container">
-					<div class="project"><div>						
-						<h2>City Explorer Demo - Open Source</h2>
-						<div class="linklist">
-							<a target="_blank" href="https://www.roblox.com/games/5003800258/City-Explorer">Play Game</a><a target="_blank" href="https://github.com/jpatrickdill/roslip-opensource">GitHub</a><a target="_blank" href="https://devforum.roblox.com/t/city-explorer-game-open-source/588000">Thread</a>
-						</div>
-						<p>
-						City Explorer is a game that allows you to explore a 3D render of any city in the world in using tile map technology.
-						</p>
-						<p>All data is sourced from <a href="https://openstreetmap.org">OpenStreetMap</a>.</p>
-						<img src="images/sanfran.png" alt="city explorer demo screenshot" width="100%"/>
-				  	</div></div>
-					
 					<div class="project"><div>	
 						<h2>Roblox Requests</h2>
 						<div class="linklist">
@@ -138,22 +133,9 @@ print(r.encoding)
 print(r.headers["x-ratelimit-remaining"])
 -- 59
 						</code></pre>
-					</div></div>
-					
-					<div class="project"><div>						
-						<h2>Beautiful Roads Plugin</h2>
-						<div class="linklist">
-							<a target="_blank" href="https://www.youtube.com/watch?v=BnULFncl1oo">Trailer</a><a target="_blank" href="https://www.roblox.com/library/4846074825/Beautiful-Roads">Install</a><a target="_blank" href="https://discord.gg/DRAf3wy">Discord</a>
-						</div>
-						<p>The Beautiful Roads Plugin is designed to create roads for your game faster than ever before. Used by over 2,500 people.</p>
-						<p>Beautiful Roads features a versatile node-based editor, a customizable visual line editor, and fully customizable textures/materials.
-						</p>
-						
-						<div class="video">
-						<iframe src="https://www.youtube.com/embed/BnULFncl1oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-												
-				  	</div></div>
+					</div>
+					<p class="hoverme">Hover for More</p>
+					</div>
 					
 					<div class="project"><div>						
 						<h2>Color Guard</h2>
@@ -167,6 +149,45 @@ print(r.headers["x-ratelimit-remaining"])
 							<a href="https://github.com/jpatrickdill/colorguard" target="_blank">GitHub</a> for more info.</p>
 						
 				  	</div></div>
+				</div>
+				
+				<div class="preprojects">
+					<h1>tools</h1>
+				</div>
+				<div class="container">
+					<div class="project"><div>						
+						<h2>Beautiful Roads Plugin</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://www.youtube.com/watch?v=BnULFncl1oo">Trailer</a><a target="_blank" href="https://www.roblox.com/library/4846074825/Beautiful-Roads">Install</a><a target="_blank" href="https://discord.gg/DRAf3wy">Discord</a>
+						</div>
+						<p>The Beautiful Roads Plugin is designed to create roads for your game faster than ever before. Used by over 3,000 people.</p>
+						<p>Beautiful Roads features a versatile node-based editor, a customizable visual line editor, and fully customizable textures/materials.
+						</p>
+						
+						<div class="video">
+						<iframe src="https://www.youtube.com/embed/BnULFncl1oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+												
+				  	</div></div>
+				</div>
+				
+				<div class="preprojects">
+					<h1>games</h1>
+				</div>
+				<div class="container">										
+					<div class="project"><div>						
+						<h2>City Explorer Demo - Open Source</h2>
+						<div class="linklist">
+							<a target="_blank" href="https://www.roblox.com/games/5003800258/City-Explorer">Play Game</a><a target="_blank" href="https://github.com/jpatrickdill/roslip-opensource">GitHub</a><a target="_blank" href="https://devforum.roblox.com/t/city-explorer-game-open-source/588000">Thread</a>
+						</div>
+						<p>
+						City Explorer is a game that allows you to explore a 3D render of any city in the world in using tile map technology.
+						</p>
+						<p>All data is sourced from <a href="https://openstreetmap.org">OpenStreetMap</a>.</p>
+						<img src="images/sanfran.png" alt="city explorer demo screenshot" width="100%"/>
+					</div>
+					<p class="hoverme">Hover for More</p>
+					</div>
 				</div>
 			</main>
 		</div>

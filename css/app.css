@@ -22,7 +22,6 @@ div.home {
 }
 
 header {
-	position: fixed;
 	padding-left: 50px;
 	/* margin-left: 50px; */
 	user-select: none;
@@ -31,17 +30,14 @@ header {
 h1.name {
 	font-weight: 300;
 	font-size: 87pt;
-	position: fixed;
 	margin-top: 20px;
+	float: left;
 }
 
 span.name {
 	opacity: 100%;
 	
 	transition: all 0.2s ease;
-}
-span.name.scr {
-	opacity: 0%;
 }
 
 h1.name span {
@@ -74,10 +70,6 @@ h1 {
 		display: inline-block;
 		font-size: 24pt;
 	}
-	
-	span.name.scrolled {
-		opacity: 100%;
-	}
 }
 
 small {
@@ -88,47 +80,41 @@ div.bio p {
 	margin: 0.7em 0;
 }
 
-@keyframes slideSize {
-  0% {
-    height: 0;
-  }
-  20% {
-    height: 0;
-  }
-  100% {
-    height: 357px;
-  }
-}
-
-@keyframes appear{
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-.home .social {
-	position: fixed;
-	margin-left: 58px;
-	border-left: 7px solid white;
-	margin-top: 88px;
+.social {
+	z-index: 3;
 	
-	padding-top: 80px;
-	padding-bottom: 16px;
+	position: fixed;
+	right: 40px;
+	
+	margin-top: 72px;
+	padding: 8px;
 	
 	text-overflow: clip;
 	overflow: hidden;
-	animation: 1.5s ease 0s 1 slideSize;
+	
+	border-radius: 56px;
+	background: rgba(125, 206, 255, 0);
+	
+	transition: all 0.2s ease;
+	
+	pointer-events: none;
 }
 
-.home .social a {
+.social > * {
+	pointer-events: auto;
+}
+
+@media screen and (min-width: 800px) {
+	.social.scr {
+		background: rgba(125, 206, 255, 1);
+		box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+		margin-top: 16px;
+	}
+}
+
+.social a {
 	user-select: none;
-	display: block;
+	display: inline-block;
 	margin: 12px;
 	margin-left: 6px;
 	font-weight: 300;
@@ -136,49 +122,70 @@ div.bio p {
 	color: #fff;
 	
 	opacity: .7;
-    transition: opacity .25s ease;
+    transition: all .3s ease;
 }
-.home .social a:visited {
+.social a:visited {
 	color: #fff;
 }
-.home .social a img {
+.social a img {
+	position: relative;
     filter: brightness(0) invert(1);
-    height: 36px;
-    width: 36px;
+    height: 40px;
+    width: 40px;
     vertical-align: middle;
 }
 
-.home .social a:hover {
+.social a:hover img {
+	animation: 0.3s slideleft;
+	filter: none;
+}
+
+.social a:hover {
 	opacity: 1;
 }
 
-.home .social a span {
+.social a span {
+	position: relative;
+	
 	margin-left: 5px;
 	
+	display: none;
 	opacity: 0;
-    transition: opacity .3s ease;
 	
 	text-overflow: clip;
 	white-space: nowrap;
 	overflow: hidden;
+	
+	text-align: center;
+	vertical-align: middle;
 }
 
-.home .social:hover a span {
+.home .social a:hover span {
+	display: inline-block;
 	opacity: 1;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 main {
 	position: absolute;
 
-	margin-top: 170px;
-	margin-left: 150px;
+	margin: 170px 28px 0 28px;
 	animation: 1s ease 0s 1 appear;
 	transition: margin-left 0.3s ease;
+	animation: .67s fadein;
 }
 
-.home .social:hover ~ main {
-	margin-left: 374px;
-}
 
 @media only screen and (max-width: 800px), screen and (max-height: 550px) {
 	.home .social {
@@ -201,16 +208,16 @@ main {
 		display: none;
 	}
 	
+	span.ln {
+		font-size: 0.25em;
+	}
+	
 	main {
 		position: static;
 
 		margin: 0;
 		animation: 1s ease 0s 1 appear;
 		transition: margin-left 0.3s ease;
-	}
-	
-	.home .social:hover ~ main {
-		margin-left: 0;
 	}
 }
 
@@ -242,16 +249,19 @@ pre, code, .hljs {
 /*	padding-bottom: 100px;*/
 }
 
+.preprojects {
+	padding-left: 28px;
+}
+
 .project {
 /*	color: #ffcbf6;*/
 	
 	flex: 1 1 15%;
-/*	width: 300px;*/
-	max-height: 400px;
-	min-height: 400px;
+	max-height: 364px;
+	min-height: 364px;
 	border-radius: 8px;
 	margin: 5px;
-	padding: 30px;
+	padding: 24px;
 	background: rgba(255, 255, 255, .2);
 	
 	position: relative;
@@ -259,7 +269,11 @@ pre, code, .hljs {
 	font-size: 14pt;
 	font-weight: 400;
 	
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
+}
+
+.project img {
+	max-width: 786px;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -272,16 +286,16 @@ pre, code, .hljs {
 	overflow: hidden;
     position: relative;
     height: 100%;
-    max-height:388px
+    max-height: 364px;
 }
 
 .project:hover {
 	color: #0A3457;
 	background: rgba(255, 255, 255, .9);
 	max-height: 1000px;
-/*	width: 400px;*/
-	z-index: 3;
 	flex-grow: 3;
+	
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
 }
 .project:hover>div {
 	max-height: 1000px;
@@ -317,6 +331,17 @@ pre, code, .hljs {
 	margin: 6px;
 }
 
+.hoverme {
+	position: absolute;
+	bottom: -12px;
+	width: 100%;
+	text-align: center;
+	font-size: .75em;
+}
+
+.project:hover .hoverme {
+	display: none;
+}
 
 @media only screen and (max-width: 800px), screen and (max-height: 550px) {
 	.container {
@@ -347,17 +372,8 @@ pre, code, .hljs {
 }
 
 
-
-div.video {
-	position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
 div.video iframe {
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+	max-width: 100% !important;
+	width: auto !important;
+	height: auto !important;
 }
