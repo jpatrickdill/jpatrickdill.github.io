@@ -187,25 +187,26 @@ main {
 }
 
 
-@media only screen and (max-width: 800px), screen and (max-height: 550px) {
-	.home .social {
+@media screen and (max-width: 800px), screen and (max-height: 550px) {
+	header {
+		float: none;
+		text-align: center;
+		overflow: auto;
+	}
+	.social {
 		position: static;
 		display: block;
-		margin: 15px 5px 0 5px;
-		padding: 0;
+		margin:0  5px;
 		
-		border: 0;
+		float: none;
+		
 		text-align: center;
 			
 		animation: none;
 	}
 	
-	.home .social a {
+	.social a {
 		display: inline-block;
-	}
-	
-	.home .social a span {
-		display: none;
 	}
 	
 	span.ln {
