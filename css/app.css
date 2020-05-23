@@ -377,3 +377,11 @@ div.video iframe {
 	width: auto !important;
 	height: auto !important;
 }
+
+.copyright {
+	font-size: 14px;
+}
+
+footer {
+	margin: 36px 0;
+}
