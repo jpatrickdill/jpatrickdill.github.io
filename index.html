@@ -147,6 +147,23 @@ print(r.headers["x-ratelimit-remaining"])
 						Figa is a Python library that allows you to manage project configuration on multiple environments with ease. Read config data from 
 						any common format including environment variables and over HTTP through a simple, accessible config object.
 						</p>
+						<p>Install with Pip:</p>
+						<pre><code class="console">$ pip install figa</code></pre>
+						<p>Example Usage:</p>
+						<pre><code class="python">@figa.config
+class Config:
+	development = "~/config.yml"  # use YAML file for config when developing
+	production = "env", "cfg_"  # use environment variables with cfg_ prefix in production
+
+	def get_env(self):
+		# function called to detect what environment being used
+
+		if "ON_HEROKU" in figa.env:  # figa.env is shortcut for os.environ
+			return "production"
+		else:
+			return "development"
+
+>>> config = Config()  # if no environment is passed, get_env() will be called.</code></pre>
 						<p>See the project's
 							<a href="https://github.com/jpatrickdill/figa" target="_blank">GitHub</a> for more info.</p>
 						
